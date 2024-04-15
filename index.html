@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="search-bar"></div>
+  </body>
+  <script type="module">
+    import SearchBar from "./index.js";
+
+    const container = document.querySelector(".search-bar");
+    const url = "./items.json";
+
+    const searchBar = new SearchBar(
+      container,
+      {
+        url: url,
+        filter: "products.items",
+        filterProperty: "name",
+      },
+      () => {
+        const results = searchBar.getResults();
+        console.log(results);
+      }
+    );
+    searchBar.createSearchBar();
+  </script>
+</html>
