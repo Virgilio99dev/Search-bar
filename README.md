@@ -38,7 +38,7 @@ Returns the filtered search results.
 ### CDN
 
 ```js
-import  SearchBar  from  "https://unpkg.com/search-bar@1.0.0/index.js";
+import  SearchBar  from  "https://unpkg.com/@bir/search-bar@1.0.0/index.js";
 
 function Search() {
     const searchBar = new SearchBar(container, {
@@ -65,7 +65,7 @@ Search();
 ### NPM
 
 ```
-npm i search-bar
+npm i @bir/search-bar
 ```
 ```js
 <body>

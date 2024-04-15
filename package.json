@@ -1,5 +1,5 @@
 {
-  "name": "search-bar",
+  "name": "@bir/search-bar",
   "version": "1.0.0",
   "description": "The `SearchBar` class provides a customizable search bar component for web applications. Users can integrate this class to create a search functionality with various customization options.",
   "main": "index.js",
