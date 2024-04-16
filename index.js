@@ -87,6 +87,8 @@ class SearchBar {
         --search-icon-color: ${this.styles.iconColor || "black"};
         --search-clear-icon-color: ${this.styles.clearIconColor || "#999"};
         --search-icon-size: ${this.styles.iconSize || "20px"};
+        --search-position: ${this.styles.position || "relative"};
+        --search-right: ${this.styles.right || "0"};
       }
       .search {
         width: var(--search-width-height);
@@ -94,10 +96,11 @@ class SearchBar {
         transition: width 0.5s;
         background-color: var(--search-background-color);
         overflow: hidden;
-        position: relative;
+        position: var(--search-position);
+        right: var(--search-right);
         border-radius: 60px;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-          rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        rgba(17, 17, 26, 0.05) 0px 8px 32px;
       }
       .search.active {
         width: var(--search-active-width);

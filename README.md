@@ -19,6 +19,8 @@ constructor(container, options, callback)
         -   `iconColor`: Color of the search icon (default: "black").
         -   `clearIconColor`: Color of the clear icon (default: "#999").
         -   `iconSize`: Size of the search icon (default: "20px").
+        -   `position`: Specifies the type of positioning method used for the search bar (default: "relative"). Other possible values include "absolute", "fixed", "sticky", and "static".
+        -   `right`: Controls the right offset of the search bar. It can be used to adjust the position of the search bar within its container (default: "0px").
     -   `filterProperty`: The property of each item to filter on.
     -   `triggerWhen`: Event trigger for updating search results (`click`, `keyup`, or `keydown`) default value: "click".
 -   `callback`: A function to be called whenever the search results are updated.
@@ -38,22 +40,13 @@ Returns the filtered search results.
 ### CDN
 
 ```js
-import  SearchBar  from  "https://unpkg.com/fun-search-bar@1.0.0/index.js";
+import  SearchBar  from  "https://unpkg.com/fun-search-bar@1.1.0/index.js";
 
 function Search() {
     const searchBar = new SearchBar(container, {
       url: "example.com/data",
-      filter: products,
-      filterProperty: "title",
-      styles: {
-        searchbarSize: "50px",
-        inputSize: "400px",
-        backgroundIconColor: "#E0FFFF",
-        iconColor: "blue",
-        clearIconColor: "#666",
-        iconSize: "24px"
-      },
-      triggerWhen: "click"
+      filter: "products",
+      filterProperty: "title"
     }, () => {
       const results = searchBar.getResults();
       console.log(results);
